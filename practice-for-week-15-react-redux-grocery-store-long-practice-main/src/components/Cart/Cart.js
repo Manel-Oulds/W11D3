@@ -1,8 +1,13 @@
 import CartItem from './CartItem';
 import './Cart.css';
+import { useSelector } from "react-redux";
 
 function Cart() {
-  const cart = {};
+  // const cart = {};
+  //  cart[Object.keys(useSelector(state=> state.cart))[0]]=(useSelector(state=> state.cart));
+  let cart=useSelector(state=> state.cart)
+console.log(cart)
+  
   const produce = {};
 
   const cartItems = Object.values(cart)
